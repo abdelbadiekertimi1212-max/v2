@@ -4,7 +4,7 @@ import { Toaster } from 'react-hot-toast'
 import './globals.css'
 import { NextIntlClientProvider } from 'next-intl'
 import { getMessages, getLocale } from 'next-intl/server'
-import GoogleAnalytics from '@/components/GoogleAnalytics'
+import GoogleAnalytics from '@/components/analytics/GoogleAnalytics'
 
 // System Font Stacks (Bypassing Google Fonts for offline build stability)
 const poppinsFont = "font-sans"
