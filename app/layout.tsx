@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   authors: [{ name: 'Abdelbadie Kertimi' }],
   creator: 'Abdelbadie Kertimi',
   publisher: 'EcoMate',
-  metadataBase: new URL('https://ecomate-pro.vercel.app'),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL || 'https://ecomate-v2-prod.vercel.app'),
   alternates: {
     canonical: '/',
     languages: {
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://ecomate-pro.vercel.app',
+    url: process.env.NEXT_PUBLIC_APP_URL || 'https://ecomate-v2-prod.vercel.app',
     siteName: 'EcoMate',
     title: 'EcoMate — Scale your Algerian Business with AI',
     description: 'Transform your social DMs into automated sales. Direct ManyChat ↔ Yalidine sync for Algerian SMEs.',

@@ -1,6 +1,11 @@
 import { createServerClient, type CookieOptions } from '@supabase/ssr'
 import { NextResponse, type NextRequest } from 'next/server'
 
+// Polyfill for __dirname in Edge Runtime if needed by dependencies
+if (typeof __dirname === 'undefined') {
+  (globalThis as any).__dirname = '.';
+}
+
 export async function middleware(request: NextRequest) {
   const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
   const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY

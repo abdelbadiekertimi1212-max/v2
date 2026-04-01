@@ -6,7 +6,7 @@ import ar from '../messages/ar.json';
 const messagesMap: Record<string, any> = { en, ar };
 
 export default getRequestConfig(async () => {
-  const cookieStore = cookies();
+  const cookieStore = await cookies();
   const locale = cookieStore.get('NEXT_LOCALE')?.value || 'en';
 
   return {

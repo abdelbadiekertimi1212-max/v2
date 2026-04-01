@@ -10,9 +10,6 @@ const nextConfig = {
     ],
   },
   optimizeFonts: false,
-  experimental: {
-    cpus: 1,
-  },
   async headers() {
     return [];
   },
